@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig {
-    public void configureGlobal(AuthenticationManagerBuilder )
+    //public void configureGlobal(AuthenticationManagerBuilder );
 
 /*        @Bean
         PasswordEncoder passwordEncoder() {
