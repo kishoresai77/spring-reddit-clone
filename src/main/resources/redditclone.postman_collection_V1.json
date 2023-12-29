@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "7eba5b0e-2f6e-456e-9ae0-11619eef9cf7",
+		"name": "redditclone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31936633"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/auth/login(2)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"venkat8\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/auth/signup(1)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"venkat8\",\n    \"email\": \"saikishore@gmail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/posts(5)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidmVua2F0OCIsImV4cCI6MTcwMzg2MzI5NiwiaWF0IjoxNzAzODYyMzk2LCJzY29wZSI6IlJPTEVfVVNFUiJ9.BBhZL0GOrxI3jjQmetUS-jRRBlzID-3BneBdzwhRtoVdciqyjriftD-yGWXKXSrl1_n8ks5CPlB0tRbHvF9gfIdnbxlQFEG1BHepcy8NoLFUAyJOZbyA3Z14Xj-hYXIURhs64mXkOTPAja1gHIGUVSqddOlByXadRg6XwNtAzRcKSes5apxFzeOt96LXLtHQc9YCGPVFzk8QmbP-PxJjITMaU0Cv5uAnyOaQJWzEFWog4aBTO7gDIAlLOYuG6EyLnZXW-zPKDxQAcAexVa5h1tzOcZJMAq0aNz3Cnt8tsZ19nRrbTEHFB0IIE2CTeI7S-nvq2f6PxYRuTHtOwpX0QA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"subredditName\" : \"First subReddit Name \",\n    \"postName\" : \"First post for youtube tutorial\",\n     \"url\" : \"htts://google.com\",\n     \"description\" : \"Descriptios\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/subreddit(4)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/subreddit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"subreddit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/comments(7 get comment)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidmVua2F0OCIsImV4cCI6MTcwMzg2NDEwMCwiaWF0IjoxNzAzODYzMjAwLCJzY29wZSI6IlJPTEVfVVNFUiJ9.SPZFjnJp88YY5wlimWho7wOb1HKiccaSiHvT2Ta7ucZTKXIq2PaDKQA1lVDv_8cAzBiBhYOfVuHxjVlXQ1ff49Y2O66FmpT9CM6-_grB1kJCPqpWcnWOvGcSqIlR34MWJG2524YUQu7Sy-oNlHRdC6j21g6Itnqt7DB3PsL3tG_MjrjVs_Ghj5OS2oOLJaZ_SsiZu5hCrwjziwuxPcNMsJu-3CQgh5ipyBoHSz7uKck2AXjR_t3IBcIwLGD4OR97N9iYl5Fm-72NXfJqPRB_uIxusWMyTEbs7NLVTOiD95d91Q1mQqu422pVvxzdY370_dRBr_IA71s3RRWu7eLgrA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"postId\" : 1,\n    \"text\" : \"First text\",\n     \"userName\" : \"venkat8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/posts(6)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/comments?postId=1 (8)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidmVua2F0OCIsImV4cCI6MTcwMzg2NDEwMCwiaWF0IjoxNzAzODYzMjAwLCJzY29wZSI6IlJPTEVfVVNFUiJ9.SPZFjnJp88YY5wlimWho7wOb1HKiccaSiHvT2Ta7ucZTKXIq2PaDKQA1lVDv_8cAzBiBhYOfVuHxjVlXQ1ff49Y2O66FmpT9CM6-_grB1kJCPqpWcnWOvGcSqIlR34MWJG2524YUQu7Sy-oNlHRdC6j21g6Itnqt7DB3PsL3tG_MjrjVs_Ghj5OS2oOLJaZ_SsiZu5hCrwjziwuxPcNMsJu-3CQgh5ipyBoHSz7uKck2AXjR_t3IBcIwLGD4OR97N9iYl5Fm-72NXfJqPRB_uIxusWMyTEbs7NLVTOiD95d91Q1mQqu422pVvxzdY370_dRBr_IA71s3RRWu7eLgrA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/comments?postId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"comments"
+					],
+					"query": [
+						{
+							"key": "postId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/votes(9)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidmVua2F0OCIsImV4cCI6MTcwMzg2NTI4MywiaWF0IjoxNzAzODY0MzgzLCJzY29wZSI6IlJPTEVfVVNFUiJ9.urj1XvhhJmFBQf1Jrp3cZix4lx4NJ3uxiNso5G7g2xV5D834QiBREeWuG-aIKwvRFRp8zg1Ovj0789-EfqC_kaNSMPRef2G6d1PLLOnQdxoqEwPiWrLEzvQchv0_yme0CJtmZCPgh7sHWAFjTV7wtaboYzqvxbYLvLXmWBDlHsOCix9gdb42cFIlhpSj3DVXGSDi_9kUCbrtuNZetlk3dp132CQdrp5fA4-V4qXc1qQNCrF9Pf93HGuxP0Ywe-U86VcR8fL5ZeoZKOa0GOOsL9nOdEg9bqqbeHZeo_DfvhiI8SSNMg6kFqYqZUDqZb1RgdjZRZiUC02bwvMcA7cfuw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"voteType\" : \"DOWNVOTE\",\n    \"postId\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/votes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"votes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/auth/refresh/token(10)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidmVua2F0OCIsImV4cCI6MTcwMzg2NjIwMiwiaWF0IjoxNzAzODY1MzAyLCJzY29wZSI6IlJPTEVfVVNFUiJ9.d9cU1sjH9jEegM-L_2ulN2UYqQD34n2aYjBRXE903jUncqffhtepDbrz84ANmQQrvJGbZEj8UxhrePoIkJ9IWsNaBBq9lrscAfWXPfDNkmGrUke9mBC8Edz6L0OPz1G6-kr_H16JtDq3P7WeDG-uCYfs1F8Qos0P1BEuQj5zkBB9pt7uzz97nhywyr5A9r2gYOZVXd5b7ZreJ9XIMo6ZRe9uGYprQ1Y55DD93O1uxiv8g8xwLSJTjZuBc-C7tcdohNyNKGx4R4REM0KCgBusnGFxDmsoyLFsrgPlCqNukiFcv9cW9QgRyCS788QBORJ6z2TuHNkbOGgELVsYd2ZfOg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refreshToken\" : \"e29834a6-6ff0-443c-99b0-2cc25d690610\",\n    \"username\" : \"venkat8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/refresh/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"refresh",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/auth/logout(11)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoidmVua2F0OCIsImV4cCI6MTcwMzg2NjIwMiwiaWF0IjoxNzAzODY1MzAyLCJzY29wZSI6IlJPTEVfVVNFUiJ9.d9cU1sjH9jEegM-L_2ulN2UYqQD34n2aYjBRXE903jUncqffhtepDbrz84ANmQQrvJGbZEj8UxhrePoIkJ9IWsNaBBq9lrscAfWXPfDNkmGrUke9mBC8Edz6L0OPz1G6-kr_H16JtDq3P7WeDG-uCYfs1F8Qos0P1BEuQj5zkBB9pt7uzz97nhywyr5A9r2gYOZVXd5b7ZreJ9XIMo6ZRe9uGYprQ1Y55DD93O1uxiv8g8xwLSJTjZuBc-C7tcdohNyNKGx4R4REM0KCgBusnGFxDmsoyLFsrgPlCqNukiFcv9cW9QgRyCS788QBORJ6z2TuHNkbOGgELVsYd2ZfOg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"refreshToken\" : \"e29834a6-6ff0-443c-99b0-2cc25d690610\",\n    \"username\" : \"venkat8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
